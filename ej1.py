@@ -37,7 +37,7 @@ def mostrar( m ):
         print()
 
 a = []
-m = 10
+m = pedirJugadores()
 
 tirarDado()
         
