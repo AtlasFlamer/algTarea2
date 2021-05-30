@@ -4,8 +4,6 @@ def mostrar( m ):
             print(tmp[f][c], end=" ")
         print()
 
-@nombre n = filas
-@nombre m = columnas
 def nueva(n, m):
     tmp = []
     for f in range(m):
@@ -14,6 +12,6 @@ def nueva(n, m):
             tmp[f].append(int(input("Ingrese un numero: ")))
     return tmp
 
-matriz = nueva( 2, 2)
+matriz = nueva(2, 3)
 
 mostrar(matriz)
