@@ -3,7 +3,7 @@ from random import randint
 def pedirJugadores () :
     return int(input("Ingrese la cantidad de jugadores: "))
 
-tmp = []
+log = []
 def tirarDado():
     for f in range(m):
         a.append([])
@@ -18,13 +18,13 @@ def tirarDado():
             if a[f][c+1] == a[f][c]:
                 veces +=1
                 if a[f][c+1] == veces:
-                    tmp.append("gana jugador " + str(f+1))
+                    log.append("gana jugador " + str(f+1))
                     break
             else: 
                 veces = 1
         a[f].remove(0)
         if c == 99:
-           tmp.append("todos pierden")
+           log.append("todos pierden")
            break
 def mostrar( m ):
 
@@ -45,8 +45,8 @@ tirarDado()
 
 mostrar(a)
 
-for i in range (len (tmp)):
-    print (tmp[i])
+for i in range (len (log)):
+    print (log[i])
 
 
 
