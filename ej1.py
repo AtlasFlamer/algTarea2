@@ -1,20 +1,52 @@
 #!/bin/python
-import random
-a=[]
-a.append(0)
-for cont in range(2):
-    a.append((int(random.randint(1,6))))
+from random import randint
+def pedirJugadores () :
+    return int(input("Ingrese la cantidad de jugadores: "))
 
-    if a[cont-1] == a[cont]:
-        print ( ">>",  a[cont], " ", a[cont-1], end = " " ) 
+tmp = []
+def tirarDado():
+    for f in range(m):
+        a.append([])
+        a[f].append(0)
+        for c in range(100):
+            a[f].append(int(randint(1,6)))
+
+            if  (a[f][c+1] == 1 ):
+                
+                break
+
+            if a[f][c+1] == a[f][c]:
+                veces +=1
+                if a[f][c+1] == veces:
+                    tmp.append("gana jugador " + str(f+1))
+                    break
+            else: 
+                veces = 1
+        a[f].remove(0)
+        if c == 99:
+           tmp.append("todos pierden")
+           break
+def mostrar( m ):
+
+    for f in range(len (m)):
+        print ("jugador", f+1,": ", end = ""  )
+        for c in range( len (m[f])):
+            print(a[f][c], end=" ")
+             
+
         print()
 
-    if a[cont] == 1:
-        print("Has perdido")
-        break
-a.remove(0)
+a = []
+m = 10
 
-print(a)
+tirarDado()
+        
+
+
+mostrar(a)
+
+for i in range (len (tmp)):
+    print (tmp[i])
 
 
 
