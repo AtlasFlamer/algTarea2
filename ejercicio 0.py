@@ -1,1 +1,5 @@
-def nueva(filas, columnas):
+@nombre n = filas
+@nombre m = columnas
+def nueva(n, m):
+    tmp = []
+    return tmp
