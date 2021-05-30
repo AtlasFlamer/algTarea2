@@ -24,3 +24,4 @@ Este es un número circular!
     El valor del determinante de la matriz
 
 Estudiar el concepto del determinante es fundamental para la correcta implementación del algoritmo ya que existen algunos casos especiales en los que el cálculo del determinente cambia.
+
