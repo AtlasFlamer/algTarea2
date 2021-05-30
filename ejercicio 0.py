@@ -12,19 +12,31 @@ def nueva(n, m):
     for f in range(m):
         tmp.append([])
         for c in range(n):
-            tmp[f].append( 0  )
+            tmp[f].append( '*'  )
     return tmp
 
-matriz = nueva(3,3)
+def chop(m):
+    tmp = deepcopy(m)
+    l = len(m) -1 
+    y =  int( ( len(m)-1  )/ 2)
+    for i in range (y):
+        for j in range ( y - i):
+            tmp[i][j] = 0
+            tmp[-i - 1][-j -1] = 0
+            tmp[i][-j-1] = 0
+            tmp[-i -1 ][j] = 0
 
 
-def indentidad( orden ):
-    tmp = nueva( orden, orden)
-    for i in range( orden ):
-        tmp[i][i] = 1
-
+    
     return tmp
+
+
+entrada = 15
+
+matriz = nueva(entrada,entrada)
+
+
        
 
-mostrar( indentidad ( 5 ))
+mostrar( chop(matriz) )
 
